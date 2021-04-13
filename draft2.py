@@ -11,21 +11,16 @@ class UserInfo:
         #initialize parameters 
         #use input statements to get info from user 
         
-    def url():
-        """Gives the user the url to the website of the site
+    def urls():
+        """Gives the user the url to the website of the site"""
         
-        Args:
-            
-
-        """
-        #input vaccine site name and output url 
         countyInput = input("Type in the County name in MD:")
         countyUrl = f"https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MD_Vaccination_Locations/FeatureServer/4/query?where=County%20%3D%20'{countyInput}'&outFields=*&returnGeometry=false&outSR=4326&f=json"
         data = urllib.request.urlopen(countyUrl).read().decode('utf-8')
         vacSites = json.loads(data)
         print(vacSites)
         
-    def get_address(county): 
+    def get_site(county): 
        """Gets the addresses of vaccine sites in MD
        
        Args:
@@ -43,7 +38,7 @@ class UserInfo:
         """
         #input a vaccine site and output the type of vaccines available 
     
-    def available_times(): 
+    def available_times(site_name): 
         """Gives the user the availabe appt times of the site
         
         Args:
