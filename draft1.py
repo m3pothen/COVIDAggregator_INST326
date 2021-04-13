@@ -1,3 +1,7 @@
+import json
+import urllib.request
+
+originalUrl = "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MD_Vaccination_Locations/FeatureServer/4/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 
 class UserInfo:  
     """A class for Maryland residents to get information on 
@@ -6,6 +10,20 @@ class UserInfo:
     def __init__(self, name, county):
         #initialize parameters 
         #use input statements to get info from user 
+        
+    def url():
+        """Gives the user the url to the website of the site
+        
+        Args:
+            
+
+        """
+        #input vaccine site name and output url 
+        countyInput = input("Type in the County name in MD:")
+        countyUrl = f"https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MD_Vaccination_Locations/FeatureServer/4/query?where=County%20%3D%20'{countyInput}'&outFields=*&returnGeometry=false&outSR=4326&f=json"
+        data = urllib.request.urlopen(countyUrl).read().decode('utf-8')
+        vacSites = json.loads(data)
+        print(vacSites)
         
     def get_address(county): 
        """Gets the addresses of vaccine sites in MD
@@ -24,15 +42,6 @@ class UserInfo:
 
         """
         #input a vaccine site and output the type of vaccines available 
-        
-    def url(site_name):
-        """Gives the user the url to the website of the site
-        
-        Args:
-            site_name (string): the name of the vaccine site
-
-        """
-        #input vaccine site name and output url 
     
     def available_times(): 
         """Gives the user the availabe appt times of the site
@@ -75,5 +84,9 @@ class EligibilityCalculator(UserInfo):
         #if user is not eligible in their county, 
         # the phase the user's county is in will be returned 
 
+def main():
+    VaccineSites.url()
+
 if __name__ == "__main__": 
     my_user = User_Info("name", "Laurel")
+    main()
