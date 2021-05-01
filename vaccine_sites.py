@@ -26,7 +26,7 @@ class Selector:
         
     def filter(self, all_data):
         self.all_data = all_data
-        self.input = input("Type: ").title()
+        self.input = input("County: ").title()
         for item in all_data:
             if item["County"] == f"{self.input}":
                 self.selected_data.append(item)
