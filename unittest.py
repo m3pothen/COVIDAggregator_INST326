@@ -1,5 +1,6 @@
 import requests 
 from csv import DictWriter
+import unittest
 
 class APIreader: 
     """Class for reading through API
@@ -19,6 +20,7 @@ class APIreader:
     
     def fill_data(self):
         """Fills the data list with name, address, phone, site type and county
+            Does not require unit tests, output changes based on manual user input. 
         
         Side effects: 
             Modifies data attribute 
@@ -51,8 +53,14 @@ class APIreader:
         countyList = list(set(values for dic in countyList for values in dic.values()))
         siteTypeList = list(set(values for dic in siteTypeList for values in dic.values()))
         
-        return data, countyList, siteTypeList
+        #test whether data is filled 
+        if len(data) > 0: 
+            assert True 
+        else: 
+            raise AssertionError
     
+        return data, countyList, siteTypeList
+
 class Extractor(): 
     """A class to extract county data from an API reader based on input
     
@@ -98,10 +106,18 @@ class Extractor():
             elif site_filter == True: 
                 if item['site type'] == self.input: 
                     output.append(item)
+        
+        #test whether output is filled 
+        if len(output) > 0: 
+            assert True 
+        else: 
+            raise AssertionError
+        
         return output
-    
+        
     def get_file(self): 
         """ Writes CSV file with headers and rows based on the returned values of the output variable.
+            Does not require unit test, csv file will serve as output of method. 
         
         Side effects: 
             Creates and saves a csv file to your directory

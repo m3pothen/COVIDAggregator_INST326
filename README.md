@@ -8,21 +8,21 @@ How to run the program from the command line:
     Enter python3 GUI.py into command line 
 
 How to use the program/how to interpret the output of the program: 
-    1. When you run the program from the command line, a graphical interface will pop up on your screen. The interface window fill be titled “Maryland Vaccination Sites Lookup 
-    2. The interface will have two search filter options. Click on the option you would like to filter by. 
-    3. A drop down menu will appear in which you can choose either the type of site or the county you would like to filter your results by 
-    4. Then a search button will appear. Click the search button. 
-    5. Then do File >> Save on your computer. This saves the results in a csv to your computer. The results will be saved in a csv (“sites.csv”) in the directory you ran GUI.py in. 
-    6. Open up the sites.csv file to see a filtered list of sites with their corresponding name, address, phone number, website url, site type, and county.
+    (1)When you run the program from the command line, a graphical interface will pop up on your screen. The interface window fill be titled “Maryland Vaccination Sites Lookup 
+    (2)The interface will have two search filter options. Click on the option you would like to filter by. 
+    (3)A drop down menu will appear in which you can choose either the type of site or the county you would like to filter your results by 
+    (4)Then a search button will appear. Click the search button. 
+    (5)Then do File >> Save on your computer. This saves the results in a csv to your computer. The results will be saved in a csv (“sites.csv”) in the directory you ran GUI.py in. 
+    (6)Open up the sites.csv file to see a filtered list of sites with their corresponding name, address, phone number, website url, site type, and county.
 
 Alternate Option: run vacInfo3.py from command line
-     - When you run the program from the command line, it will ask to enter a filter you would like to filter your results by (enter in either “county” or “site type”)
-     - If you entered county as a filter, enter the name of one of the following counties (must follow proper capitalization): 
+    (1)When you run the program from the command line, it will ask to enter a filter you would like to filter your results by (enter in either “county” or “site type”)
+    (2)If you entered county as a filter, enter the name of one of the following counties (must follow proper capitalization): 
         List of counties in API: Allegany, Anne Arundel, Baltimore, Baltimore City, Calvert, Carrol, Caroline, Cecil, Charles, Dorchester, Frederick, Garrett, Harford, Howard, Montgomery, Kent, Queen Anne’s, Prince George’s, Somerset, St. Mary’s, Talbot, Washington, Worcester, Wicomico
-     - If you entered site type as a filter, enter the type of site from one of the following options: 
+    (3)If you entered site type as a filter, enter the type of site from one of the following options: 
         List of site types in API: Hospital, Hospital - JHU, Hospital - Medstar, Hospital - UMMS, Local Health Department, Hospital - Adventist Healthcare, Pharmacy, Mass Vaccination
-     - The program will then print out “Thank you, please check your directory for file”. The csv file with the filtered results will be saved to the folder you ran the program in. The name of the excel file is sites.csv
-     - Open up the sites.csv file to see a filtered list of sites with their corresponding name, address, phone number, website url, site type, and county. 
+    (4)The program will then print out “Thank you, please check your directory for file”. The csv file with the filtered results will be saved to the folder you ran the program in. The name of the excel file is sites.csv
+    (5)Open up the sites.csv file to see a filtered list of sites with their corresponding name, address, phone number, website url, site type, and county. 
 
 Annotated Bibliography: 
 “All Maryland Vaccination Sites.” Maryland.gov, 13 May 2021, 
