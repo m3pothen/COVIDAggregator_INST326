@@ -40,7 +40,7 @@ class GUI:
         label = Label(self.app, text = "Select Search Filter", width = 100, height = 50, bitmap = "questhead", compound = "top")
         label.pack()
         
-        self.countyButton = Button(self.app, text = "County Filter Options", command = self.apply_county_filter)
+        self.countyButton = Button(self.app, text = "Country Filter Options", command = self.apply_county_filter)
         self.countyButton.pack()
         
         self.siteTypeButton = Button(self.app, text = "Site Type Filter Options", command = self.apply_site_type_filter)
