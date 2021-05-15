@@ -90,6 +90,7 @@ class Extractor():
     def get_output(self): 
         """Stores the first variable from the stored fill_data() method.
             Appends the data to a list based on the variable using get() command.
+            Does not require unit tests, output changes based on manual user input
         
         Side effects:
             Modifies output.
@@ -130,6 +131,7 @@ class Extractor():
 def main(user_input): 
     """Creates instance of Extractor class and passes string variable.
         Calls get_file() method and write an CSV file.
+        Does not require unit tests, output changes based on manual user input
     """
     my_extractor = Extractor(user_input)
     my_extractor.get_file()

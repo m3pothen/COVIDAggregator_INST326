@@ -19,6 +19,7 @@ class APIreader:
     
     def fill_data(self):
         """Fills the data list with name, address, phone, site type and county
+            Does not require unit tests, output changes based on manual user input
         
         Side effects: 
             Modifies data attribute 
@@ -82,6 +83,7 @@ class Extractor():
     def get_output(self): 
         """Stores the first variable from the stored fill_data() method.
             Appends the data to a list based on the variable using get() command.
+            Does not require unit tests, output changes based on manual user input
         
         Side effects:
             Modifies output.
@@ -102,7 +104,8 @@ class Extractor():
     
     def get_file(self): 
         """ Writes CSV file with headers and rows based on the returned values of the output variable.
-        
+            Does not require unit tests, output changes based on manual user input
+            
         Side effects: 
             Creates and saves a csv file to your directory
         """
