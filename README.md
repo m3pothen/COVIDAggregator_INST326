@@ -29,3 +29,18 @@ Annotated Bibliography:
     coronavirus.maryland.gov/datasets/all-maryland-vaccination-sites-1/geoservice? geometry=-82.760%2C37.447%2C-71.762%2C40.437.
 
 We used the Maryland Vaccination sites API to gain access to data on vaccination sites in Maryland. This API is updated daily, which allows our program to generate accurate and current data. The information provided for each site includes the site name, county, address, phone number, site type, walk-in hours and much more. The information is submitted by each vaccination site themselves, thus we can trust that this information will be accurate. 
+
+Unit Testing Explanation
+
+This program's functions are entirely based on manual input and therefore cannot be unittested. 
+An explanation on how to test each method can be found below:
+
+vacInfo3.py:
+- fill_data(): In order to test the function, the user would need to confirm that the csv file
+generated matches the expected output. More detailed testing can be done in the program by
+running the fill_data function on an instance of the APIReader and printing the results.
+- get_output(): In order to test the function, the user would need to confirm that the csv file
+generated matches the expected output. More detailed testing can be done in the program by
+running the get_output() function on an instance of the Extractor and printing the results.
+- get_file(): In order to test the function, the user would need to confirm that the csv file
+exists and generated matches the expected output.

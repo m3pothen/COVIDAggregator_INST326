@@ -81,8 +81,8 @@ class Extractor():
         self.output = self.get_output()
         
     def get_output(self): 
-        """Stores the first variable from the stored fill_data() method.
-            Appends the data to a list based on the variable using get() command.
+        """Filters the output based on whether user chose county or site filter.
+            Appends data from data attribute to output list 
             Does not require unit tests, output changes based on manual user input
         
         Side effects:
