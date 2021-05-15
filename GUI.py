@@ -1,4 +1,4 @@
-""" A script that creates a simple Graphical User Interface (GUI) where users can filter the vaccination sites results parsed from official Maryland Covid-19 vaccination sites API."""
+""" A script that creates a simple Graphical User Interface (GUI) where users can filter the vaccination sites results parsed from official Maryland Covid-19 vaccination sites API.."""
 import vacInfo3
 import tkinter as tk
 from csv import DictWriter
@@ -12,7 +12,7 @@ class GUI:
         apiReader (List of dictionaries): 3 list of dictionaries stored from the VacInfo3 fill_data() method.
         app (GUI): backbone to create a start screen.
     """
-    def __init__(self):
+    def __init__(self): 
         """ 
         Functionality:
             Creates an instance of APIreader class from the vacInfo3 module.
